@@ -1,7 +1,7 @@
 # Interactive-Treemap
 TO DO:
 
-1. Finish Writing Pilot Study Draft:
+1: Finish Writing Pilot Study Draft:
 - [ ] Introduction (NOT SURE IF SUPER IMPORTANT TO MAKE THIS SECTION ROBUST YET)
 - [ ] Experimental Design (MULTIPLE OF PARTS)
 - [x] ED - Purpose of Study / Goals
@@ -14,9 +14,9 @@ TO DO:
 - [ ] ED - Experiment Part 3: Effectiveness of Depth-Based Color Encoding w/ Interactive Methods
 - [ ] ED - Experiment Part 4: Effectiveness of Containment-Based Color Encoding w/ Interactive Methods
 
-2. Additional Functionality for Treemap:
+2: Additional Functionality for Treemap:
 - [ ] Group Comparison Functionality
 - [ ] Multiple Treemap Functionality (See http://vizhub.healthdata.org/gbd-compare/)
 
 TO DO for pilot study:
-- [ ] Make a more traditional WIMP version of current treemap version
+- [ ] Make a more traditional WIMP version of current treemap version.
