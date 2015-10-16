@@ -20,3 +20,4 @@ TO DO:
 
 TO DO for pilot study:
 - [ ] Make a more traditional WIMP version of current treemap version.
+- [ ] Add a mouse-enter/leave event for poping up the current containment node(parent) of the currently hovered leaf. (URGENT since I am not going to be able to use color hues as a third encoding for the tree containment structure)
