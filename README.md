@@ -10,9 +10,13 @@ TO DO:
 - [ ] ED - Experimentation Approach
 - [x] ED - Tasks Employed (ok for now, could refine)
 - [ ] ED - Experiment Part 1: Effectiveness of Interactive Direct Comparison
+  - (noColorIntuitive vs noColorTraditional)
 - [ ] ED - Experiment Part 2: Effectiveness of Interactive Explicit Shearing
+  - (noColorIntuitive vs noColorTraditional)
 - [ ] ED - Experiment Part 3: Effectiveness of Depth-Based Color Encoding w/ Interactive Methods
+  - (nocolorIntuitive vs depthColorIntuitive vs depthColorTraditional)
 - [ ] ED - Experiment Part 4: Effectiveness of Containment-Based Color Encoding w/ Interactive Methods
+  - (nocolorIntuitive vs containColorIntuitive vs containColorTraditional)
 
 2: Additional Functionality for Treemap:
 - [ ] Group Comparison Functionality
