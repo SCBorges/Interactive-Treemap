@@ -178,8 +178,8 @@ d3.json("flare.json", function(error, root) {
 function addForceTouchToElement(elem){
   // elem.addEventListener("webkitmouseforcewillbegin", checkMacForce);
   // elem.addEventListener("webkitmouseforcechanged", checkMacForce);
-  elem.addEventListener("webkitmouseforcedown", enterForceClick);
-  elem.addEventListener("webkitmouseforceup", exitForceClick);
+  elem.addEventListener("webkitmouseforcedown", enterForceClick, false);
+  elem.addEventListener("webkitmouseforceup", exitForceClick, false);
 }
 // function mouseEnter(){
 //   if(!d3.select(this).datum().children){
