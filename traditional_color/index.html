@@ -127,7 +127,7 @@ d3.json("flare.json", function(error, root) {
       
       // var temp = d3.selectAll(".node");
 
-      document.getElementsByClassName("node").forEach(function(e){ addForceTouchToElement(e); });
+      document.getElementsByClassName("node").forEach(function(){ addForceTouchToElement(this); });
       
       
       // .on("click", detectShear);
@@ -152,6 +152,23 @@ d3.json("flare.json", function(error, root) {
       .call(position);
   });
 
+
+  var forceclick = false;
+
+  function enterForceClick(){
+    d3.select(this)
+      .style("background", "blue");
+    console.log(forceclick);
+    forceclick = true;
+  }
+
+  function exitForceClick(){
+    d3.select(this)
+      .style("background", "red");
+
+    console.log(forceclick);
+    forceclick = false;
+  }
 // d3.select("#main").on("click", function(){
 //   alert("yup");
 // });
@@ -299,23 +316,6 @@ var svg = d3.select("#svgLayer");
 
 var prevComp;
 
-
-var forceclick = false;
-
-function enterForceClick(){
-  d3.select(this)
-    .style("background", "blue");
-  console.log(forceclick);
-  forceclick = true;
-}
-
-function exitForceClick(){
-  d3.select(this)
-    .style("background", "red");
-
-  console.log(forceclick);
-  forceclick = false;
-}
 
 function dragstarted() {
   dragDone = false;
