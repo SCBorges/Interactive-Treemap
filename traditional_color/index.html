@@ -123,11 +123,13 @@ d3.json("flare.json", function(error, root) {
       // .call(drag)
       .on("mouseover", mouseEnter)
       .on("mouseout", mouseLeave)
-      .on("click", mouseClick)
-      .on("webkitmouseforcewillbegin", checkMacForce)
-      .on("webkitmouseforcechanged", checkMacForce)
-      .on("webkitmouseforcedown", enterForceClick)
-      .on("webkitmouseforceup", exitForceClick);
+      .on("click", mouseClick);
+      
+      var temp = d3.selectAll(".node")[][];
+
+      temp.forEach(function(e){ addForceTouchToElement(e); });
+      
+      
       // .on("click", detectShear);
 
       // console.log(d3.selectAll("[depth=d0]"));
@@ -173,6 +175,12 @@ d3.json("flare.json", function(error, root) {
   // d3.selectAll(".node").on("mouseover", mouseOvr);
 });
 
+function addForceTouchToElement(elem){
+  elem.addEventListener("webkitmouseforcewillbegin", checkMacForce);
+  elem.addEventListener("webkitmouseforcechanged", checkMacForce);
+  elem.addEventListener("webkitmouseforcedown", enterForceClick);
+  elem.addEventListener("webkitmouseforceup", exitForceClick);
+}
 // function mouseEnter(){
 //   if(!d3.select(this).datum().children){
 //     var hovered = d3.select(this);
