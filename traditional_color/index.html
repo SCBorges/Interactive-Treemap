@@ -303,11 +303,16 @@ var prevComp;
 var forceclick = false;
 
 function enterForceClick(){
+  d3.select(this)
+    .style("background", "blue");
   console.log(forceclick);
   forceclick = true;
 }
 
 function exitForceClick(){
+  d3.select(this)
+    .style("background", "red");
+
   console.log(forceclick);
   forceclick = false;
 }
