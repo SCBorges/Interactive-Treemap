@@ -244,6 +244,8 @@ var text = "Compare:";
 
 var svg = d3.select("#svgLayer");
 
+var prevComp;
+
 
 function dragstarted() {
   dragDone = false;
@@ -565,8 +567,10 @@ function dragged(d) {
               .style("width", function(d){ return Math.max(0, d.dx - 1)+"px";})
               .style("height", function(d){ return Math.max(0, d.dy - 1)+"px";})
               // .style("background", function(d){return d3.rgb(color(d.parent.name));})
-
-            compare = d3.select(d);
+            // if(prevComp != compare){
+              compare = d3.select(d);
+              // prevComp = compare;
+            // }
             compare.classed("compare", true).classed("old",false)
             d3.selectAll(".old").style("background", function(d){return d3.rgb(color(d.parent.name));})
           }
@@ -609,8 +613,8 @@ function dragged(d) {
           .transition()
           .ease("elastic")
           .duration(500)
-          .style("width", function(){ return Math.sqrt(scaler)*(dwidth/a)+"px";})
-          .style("height", function(){ return Math.sqrt(scaler)*(dheight/a)+"px";})
+          .style("width", function(){if(prevComp != compare) return Math.sqrt(scaler)*(dwidth/a)+"px";})
+          .style("height", function(){if(prevComp != compare) return Math.sqrt(scaler)*(dheight/a)+"px";})
           // .style("width", function(){ return Math.sqrt(wthis*hthis)+"px";})
           // .style("height", function(){ return Math.sqrt(wthis*hthis)+"px";})
           // .styleTween("opacity", function() { if(dragItem.style("opacity") != 0.75) return d3.interpolate(1, 0.75); })

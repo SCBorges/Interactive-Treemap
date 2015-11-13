@@ -1,0 +1,24 @@
+{
+ "name": "1",
+ "size":"100",
+ "children": [
+  	{
+	 "name": "2",
+	 "size":"50",
+	 "children": [
+	 	{"name":"4","size":"20"},
+	 	{"name":"5","size":"50"}
+	 ]
+	},
+	{
+	 "name":"3",
+	 "size":"80",
+	 "children":[
+	 	{"name":"6","size":"30"},
+	 	{"name":"7","size":"50"},
+	 	{"name":"8","size":"100"},
+	 	{"name":"9","size":"200"}
+	 ]
+	}
+  ]
+}
