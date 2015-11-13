@@ -125,9 +125,9 @@ d3.json("flare.json", function(error, root) {
       .on("mouseout", mouseLeave)
       .on("click", mouseClick);
       
-      var temp = d3.selectAll(".node");
+      // var temp = d3.selectAll(".node");
 
-      temp.forEach(function(e){ addForceTouchToElement(e); });
+      document.getElementsByClassName("node").forEach(function(e){ addForceTouchToElement(e); });
       
       
       // .on("click", detectShear);
