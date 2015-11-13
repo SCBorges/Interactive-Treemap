@@ -123,7 +123,11 @@ d3.json("flare.json", function(error, root) {
       // .call(drag)
       .on("mouseover", mouseEnter)
       .on("mouseout", mouseLeave)
-      .on("click", mouseClick);;
+      .on("click", mouseClick)
+      .on("webkitmouseforcewillbegin", checkMacForce)
+      .on("webkitmouseforcechanged", checkMacForce)
+      .on("webkitmouseforcedown", enterForceClick)
+      .on("webkitmouseforceup", exitForceClick);
       // .on("click", detectShear);
 
       // console.log(d3.selectAll("[depth=d0]"));
@@ -287,6 +291,18 @@ var svg = d3.select("#svgLayer");
 
 var prevComp;
 
+
+var forceclick = false;
+
+function enterForceClick(){
+  console.log(forceclick);
+  forceclick = true;
+}
+
+function exitForceClick(){
+  console.log(forceclick);
+  forceclick = false;
+}
 
 function dragstarted() {
   dragDone = false;
